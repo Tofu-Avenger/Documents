@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Our Funky HTML Page</title>
+    <meta name="description" content="Our first page">
+    <meta name="keywords" content="html tutorial template">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+</head>
+
+<body>
+    <h1 id="pixels">Status: Broken. Please Reload</h1>
+    <div>If you find some pixels on the canvas are missing please reload and try again</div>    
+    <img src="./src.png" id="src" style="display: none;">
+    <canvas id="canvas" style="border:1px solid #d3d3d3;">Your browser doesn't include support for the canvas element.</canvas>
+    <canvas id="blocksNeeded" width="300" height="300" style="border:1px solid #d3d3d3;">Your browser doesn't include support for the canvas element.</canvas>
+    <br>
+    <button onclick="copy()">Convert To Minecraft!</button>
+    <div id="block">Blocks needed (The lower the similarity score, the better):</div>
+    <script src="color.js"></script>
+</body>
+
+</html>
