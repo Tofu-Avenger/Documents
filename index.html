@@ -1,25 +1,43 @@
 <!DOCTYPE html>
-
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-
-<head>
-    <title>Our Funky HTML Page</title>
-    <meta name="description" content="Our first page">
-    <meta name="keywords" content="html tutorial template">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-</head>
-
-<body>
-    <h1 id="pixels">Status: Broken. Please Reload</h1>
-    <div>If you find some pixels on the canvas are missing please reload and try again</div>    
-    <img src="./src.png" id="src" style="display: none;">
-    <canvas id="canvas" style="border:1px solid #d3d3d3;">Your browser doesn't include support for the canvas element.</canvas>
-    <canvas id="blocksNeeded" width="300" height="300" style="border:1px solid #d3d3d3;">Your browser doesn't include support for the canvas element.</canvas>
-    <br>
-    <button onclick="copy()">Convert To Minecraft!</button>
-    <div id="block">Blocks needed (The lower the similarity score, the better):</div>
-    <script src="color.js"></script>
-</body>
-
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <script type="module" src="scripts/js/hungerGamesScript/main.js" defer></script>
+        <script type="module" src="scripts/js/hungerGamesScript/players.js" defer></script>
+        <script src="scripts/js/pages.js" defer></script>
+        <script src="scripts/js/data.js" defer></script>
+        <script src="scripts/js/styles.js" defer></script>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <section id="day" class="active">
+            <div id="navbarwrapper">
+                <div id="navbar">
+                    <div class="navicon"><a><div>pee</div></a></div>
+                    <div class="navicon"><a><div>pee</div></a></div>
+                    <div class="navicon"><a><div>pee</div></a></div>
+                </div>
+            </div>
+            <button onclick="day()">oh my got!!!</button>
+            <input type="file" style="display: none;" id="fileChooser" />
+            <button onclick="changePage('data')">Edit Data</button>
+        </section>
+        <section id="data" class="inactive">
+            <button onclick="changePage('day')">Day</button>    
+            <div class="dataEditSection" id="dataPlayerSection">
+                <div>Add Player:</div>
+            </div>
+        </section>
+    </body>
 </html>
